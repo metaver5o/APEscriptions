@@ -1,7 +1,7 @@
 {
     "name": "ethscription-minting",
     "version": "1.0.0",
-    "description": "A project for minting Ethscriptions on Curtis Apechain testnet",
+    "description": "A project for minting Ethscriptions on Apechain mainnet ",
     "main": "mint.js",
     "scripts": {
       "start": "node mint.js"
