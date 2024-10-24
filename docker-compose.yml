@@ -1,0 +1,34 @@
+# APEscription: Docker compose file to run the minting service
+
+# Examples for setting DATA_TO_MINT:
+# 1. Minting a Figure (as a string):
+#    DATA_TO_MINT="This is a figure description" docker-compose up
+
+# 2. Minting a JSON Object:
+#    DATA_TO_MINT='{"name":"NFT Figure","attributes":{"color":"red","size":"large"}}' docker-compose up
+
+# 3. Minting a Git Commit (as a string):
+#    DATA_TO_MINT="Git commit hash: abcdef123456" docker-compose up
+
+# 4. Minting Music (as a base64 string):
+#    DATA_TO_MINT=$(base64 path_to_music_file.mp3) docker-compose up
+
+# 5. Minting a Video (as a base64 string):
+#    DATA_TO_MINT=$(base64 path_to_video_file.mp4) docker-compose up
+
+# 6. Minting a JPEG:
+#   DATA_TO_MINT=$(base64 path_to_image.jpg) docker-compose up
+
+version: '3'
+services:
+  minting_service:
+    build: .
+    environment:
+      - RPC_URL
+      - PRIVATE_KEY
+      - RECIPIENT_ADDRESS
+      - TX_VALUE
+      - GAS_LIMIT
+      - DATA_TO_MINT
+    volumes:
+      - ./data:/usr/src/app/data/

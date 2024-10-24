@@ -1,0 +1,14 @@
+{
+    "name": "ethscription-minting",
+    "version": "1.0.0",
+    "description": "A project for minting Ethscriptions on Curtis Apechain testnet",
+    "main": "mint.js",
+    "scripts": {
+      "start": "node mint.js"
+    },
+    "dependencies": {
+      "ethers": "^6.0.0"
+    },
+    "author": "metaverso.eth",
+    "license": "MIT"
+  }
